@@ -33,10 +33,10 @@ function updateJob(updatedJob) {
     // Map through the jobs and replace the one with the matching id
     // Save the updated array to localStorage
     const jobs = getJobs();
-    const jobs2 = jobs.map((job) =>
+    const updatedJobsArr = jobs.map((job) =>
         job.id == updatedJob.id ? updatedJob : job
     );
-    localStorage.setItem("jobs", jobs2);
+    localStorage.setItem("jobs", updatedJobsArr);
 }
 
 // Step 5: Create the deleteJob function
@@ -46,7 +46,8 @@ function deleteJob(id) {
     // Filter out the job with the matching id
     // Save the updated array to localStorage
     const jobs = getJobs();
-    // jobs.filter((job) => )
+    const updatedJobsArr = jobs.filter((job) => job.id != id);
+    localStorage.setItem("jobs", updatedJobsArr);
 }
 
 export { getJobs, getJob, addJob, updateJob, deleteJob };
