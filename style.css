@@ -1,0 +1,154 @@
+body {
+    font-family: sans-serif;
+    background-color: #004643;
+    color: #abd1c6;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #004643;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #fffffe;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fffffe;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #abd1c6;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #e8e4e6;
+    color: #001e1d;
+}
+
+.btn, .btn-add, .btn-primary {
+    display: inline-block;
+    background: #f9bc60;
+    color: #001e1d;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.btn-primary {
+    width: 100%;
+    font-size: 16px;
+}
+
+.btn-add {
+    background: #abd1c6;
+    color: #001e1d;
+}
+
+.error {
+    color: #e16162;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.border-red-500 {
+    border-color: #e16162;
+}
+
+.border-green-500 {
+    border-color: #abd1c6;
+}
+
+#listings-container {
+    margin-top: 20px;
+}
+
+.listing {
+    background: #e8e4e6;
+    color: #001e1d;
+    padding: 15px;
+    border: 1px solid #abd1c6;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.listing h3 {
+    margin-top: 0;
+    color: #001e1d;
+}
+
+.listing .actions {
+    margin-top: 10px;
+}
+
+.listing .actions button {
+    margin-right: 10px;
+}
+
+.listing .actions .edit-btn {
+    background: #abd1c6;
+    color: #001e1d;
+}
+
+.listing .actions .delete-btn {
+    background: #e16162;
+    color: #fffffe;
+}
+
+.skill-item, .project-block {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #abd1c6;
+    border-radius: 4px;
+    background-color: #abd1c6;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+}
+
+.skill-item input {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.project-block .form-group {
+    margin-bottom: 10px;
+}
+
+.btn-delete-skill, .btn-delete-project {
+    background: #e16162;
+    color: #fffffe;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn-delete-project {
+    margin-top: 10px;
+    margin-left: 0;
+}

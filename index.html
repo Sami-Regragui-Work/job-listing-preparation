@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Job Listing Management</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Job Listing Management</h1>
+            <form id="job-form">
+                <input type="hidden" id="job-id" />
+                <div class="form-group">
+                    <label for="company-name">Company Name</label>
+                    <input
+                        type="text"
+                        id="company-name"
+                        placeholder="Enter company name"
+                    />
+                    <div id="company-name-error" class="error hidden"></div>
+                </div>
+                <div class="form-group">
+                    <label for="job-title">Job Title</label>
+                    <input
+                        type="text"
+                        id="job-title"
+                        placeholder="Enter job title"
+                    />
+                    <div id="job-title-error" class="error hidden"></div>
+                </div>
+                <div class="form-group">
+                    <label for="contract-type">Contract Type</label>
+                    <select id="contract-type">
+                        <option value="Full-time">Full-time</option>
+                        <option value="Part-time">Part-time</option>
+                        <option value="Contract">Contract</option>
+                        <option value="Internship">Internship</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea
+                        id="description"
+                        placeholder="Enter job description"
+                    ></textarea>
+                    <div id="description-error" class="error hidden"></div>
+                </div>
+                <div class="form-group">
+                    <label>Skills</label>
+                    <div id="skills-container">
+                        <div class="skill-item">
+                            <input
+                                type="text"
+                                class="skill"
+                                placeholder="Enter a skill"
+                            />
+                        </div>
+                    </div>
+                    <button type="button" id="add-skill" class="btn-add">
+                        Add Skill
+                    </button>
+                </div>
+                <div class="form-group">
+                    <label>Projects</label>
+                    <div id="projects-container">
+                        <!-- Project blocks will be added here -->
+                    </div>
+                    <button type="button" id="add-project" class="btn-add">
+                        Add Project
+                    </button>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Job</button>
+            </form>
+            <div id="job-listings">
+                <h2>Job Listings</h2>
+                <div id="listings-container"></div>
+            </div>
+        </div>
+        <script src="js/main.js" type="module"></script>
+    </body>
+</html>
