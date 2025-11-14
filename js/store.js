@@ -5,14 +5,13 @@ function getJobs() {
     // If jobs exist, parse them and return, otherwise return an empty array
     return JSON.parse(localStorage.getItem("jobs")) || [];
 }
-
 // Step 2: Create the getJob function
 // TODO: Implement the getJob function
 function getJob(id) {
     // Get all jobs
     // Find the job with the matching id and return it
     const jobs = getJobs();
-    return jobs.filter((job) => job[id])[0];
+    return jobs.filter((job) => job.id == id)[0];
 }
 
 // Step 3: Create the addJob function
