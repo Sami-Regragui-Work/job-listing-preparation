@@ -22,7 +22,7 @@ function addJob(job) {
     // Save the updated array to localStorage
     const jobs = getJobs();
     jobs.push(job);
-    localStorage.setItem("jobs", jobs);
+    localStorage.setItem("jobs", JSON.stringify(jobs));
 }
 
 // Step 4: Create the updateJob function
@@ -35,7 +35,7 @@ function updateJob(updatedJob) {
     const updatedJobsArr = jobs.map((job) =>
         job.id == updatedJob.id ? updatedJob : job
     );
-    localStorage.setItem("jobs", updatedJobsArr);
+    localStorage.setItem("jobs", JSON.stringify(updatedJobsArr));
 }
 
 // Step 5: Create the deleteJob function
@@ -46,7 +46,7 @@ function deleteJob(id) {
     // Save the updated array to localStorage
     const jobs = getJobs();
     const updatedJobsArr = jobs.filter((job) => job.id != id);
-    localStorage.setItem("jobs", updatedJobsArr);
+    localStorage.setItem("jobs", JSON.stringify(updatedJobsArr));
 }
 
 export { getJobs, getJob, addJob, updateJob, deleteJob };
